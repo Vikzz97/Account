@@ -1,7 +1,7 @@
 let express = require('express');
 let mongoose = require('mongoose');
 const enquiryRouter = require('./App/routes/web/enquiryRoutes');
-require('dotenv').config();
+let PORT = require('dotenv').config();
 let cors = require('cors')
 
 let app = express();
@@ -12,7 +12,7 @@ app.use(express.json());
 //Routes
 app.use('/api/website/enquiry',enquiryRouter)
 
-//http://localhost:8000/api/website/enquiry/insert
+//http://localhost:10000/api/website/enquiry/insert
 
 
 // connect to MongoDB
